@@ -34,65 +34,33 @@ st.markdown(
 
 # =======================
 # 🔥 LOGO — YAHAN DALO 🔥
-# # =======================
-# col1, col2, col3 = st.columns([1, 1, 1])
-# with col2:
-#     st.image("HDB.png", width=80)
-
-# # =======================
-# # TITLE — LOGO KE BAAD
-# # =======================
-# st.markdown(
-#     """
-#     <style>
-#     .header-title {
-#         font-size: 42px;
-#         font-weight: 900;
-#         text-align: center;
-#         margin-bottom: 10px;
-#     }
-#     </style>
-
-#     <div class="header-title">
-#         HDFC Credit Card Churn Prediction
-#     </div>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-
+# =======================
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    st.image("HDB.png", width=80)
 
 # =======================
-# HEADER (CORRECT WAY)
+# TITLE — LOGO KE BAAD
 # =======================
-col_title, col_logo = st.columns([6, 1])
-
-with col_title:
-    st.markdown(
-        """
-        <style>
-        .main-title {
-            font-size: 64px;
-            font-weight: 900;
-            color: white;
-            margin-bottom: 0px;
-        }
-        </style>
-        <div class="main-title">
-            HDFC Credit Card Churn Prediction
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-with col_logo:
-    st.image("assets/hdfc_logo.png", width=90)
-
 st.markdown(
-    "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
+    """
+    <style>
+    .header-title {
+        font-size: 42px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    </style>
+
+    <div class="header-title">
+        HDFC Credit Card Churn Prediction
+    </div>
+    """,
     unsafe_allow_html=True
 )
+
+
 
 
 
