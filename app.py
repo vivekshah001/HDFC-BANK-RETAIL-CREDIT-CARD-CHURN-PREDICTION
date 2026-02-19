@@ -83,6 +83,32 @@ input_df = pd.DataFrame([{
 # # =======================
 
 
+# if st.button("Predict Churn"):
+#     try:
+#         X_transformed = transformer.transform(input_df)
+
+#         pred = model.predict(X_transformed)[0]
+
+#         if pred == 1:
+#             final_label = "Churned"
+#         else:
+#             final_label = "Not Churned"
+
+#         st.subheader("Result")
+#         st.write("Prediction:", final_label)
+
+#     except Exception as e:
+#         st.error("Prediction failed")
+#         st.exception(e)
+
+
+
+
+
+
+
+
+
 if st.button("Predict Churn"):
     try:
         X_transformed = transformer.transform(input_df)
@@ -95,32 +121,31 @@ if st.button("Predict Churn"):
             final_label = "Not Churned"
 
         st.subheader("Result")
-        st.write("Prediction:", final_label)
+
+        if final_label == "Churned":
+            st.markdown(
+                f"""
+                <div class="result-box">
+                    <h3 style="color:#ff4b4b;">⚠ Customer Likely to Churn</h3>
+                    <p><b>Status:</b> {final_label}</p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                f"""
+                <div class="result-box">
+                    <h3 style="color:#00ff9c;">✅ Customer Safe</h3>
+                    <p><b>Status:</b> {final_label}</p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     except Exception as e:
         st.error("Prediction failed")
         st.exception(e)
 
 
-
-if final_label == "Churned":
-    st.markdown(
-        f"""
-        <div class="result-box">
-            <h3 style="color:#ff4b4b;">⚠ Customer Likely to Churn</h3>
-            <p><b>Status:</b> {final_label}</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    st.markdown(
-        f"""
-        <div class="result-box">
-            <h3 style="color:#00ff9c;">✅ Customer Safe</h3>
-            <p><b>Status:</b> {final_label}</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
