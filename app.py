@@ -76,51 +76,6 @@ st.markdown(
 # header
 # ============================
 
-# st.markdown(
-#     """
-#     <style>
-#     .header-container {
-#         display: flex;
-#         align-items: center;
-#         justify-content: center;
-#         gap: 18px;
-#         margin-bottom: 25px;
-#     }
-
-#     .header-container img {
-#         height: 70px;
-#     }
-
-#     .header-title {
-#         font-size: 42px;
-#         font-weight: 900;
-#         color: white;
-#         letter-spacing: 0.5px;
-#     }
-
-#     .header-divider {
-#         height: 2px;
-#         background: linear-gradient(to right, transparent, #ffffff, transparent);
-#         margin: 15px 0 30px 0;
-#     }
-#     </style>
-
-#     <div class="header-container">
-#         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/HDFC_Bank_Logo.svg">
-#         <div class="header-title">HDFC Credit Card Churn Prediction</div>
-#     </div>
-
-#     <div class="header-divider"></div>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-
-# ====================
-# header2
-# ====================
-
 st.markdown(
     """
     <style>
@@ -128,13 +83,12 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 18px;
         margin-bottom: 25px;
-        flex-wrap: nowrap;
     }
 
     .header-container img {
-        height: 60px;
+        height: 70px;
     }
 
     .header-title {
@@ -142,7 +96,6 @@ st.markdown(
         font-weight: 900;
         color: white;
         letter-spacing: 0.5px;
-        white-space: nowrap;
     }
 
     .header-divider {
@@ -153,7 +106,7 @@ st.markdown(
     </style>
 
     <div class="header-container">
-        <img src="assets/hdfc_logo.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/HDFC_Bank_Logo.svg">
         <div class="header-title">HDFC Credit Card Churn Prediction</div>
     </div>
 
@@ -161,6 +114,53 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
+
+# ====================
+# header2
+# ====================
+
+# st.markdown(
+#     """
+#     <style>
+#     .header-container {
+#         display: flex;
+#         align-items: center;
+#         justify-content: center;
+#         gap: 16px;
+#         margin-bottom: 25px;
+#         flex-wrap: nowrap;
+#     }
+
+#     .header-container img {
+#         height: 60px;
+#     }
+
+#     .header-title {
+#         font-size: 42px;
+#         font-weight: 900;
+#         color: white;
+#         letter-spacing: 0.5px;
+#         white-space: nowrap;
+#     }
+
+#     .header-divider {
+#         height: 2px;
+#         background: linear-gradient(to right, transparent, #ffffff, transparent);
+#         margin: 15px 0 30px 0;
+#     }
+#     </style>
+
+#     <div class="header-container">
+#         <img src="assets/hdfc_logo.png">
+#         <div class="header-title">HDFC Credit Card Churn Prediction</div>
+#     </div>
+
+#     <div class="header-divider"></div>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 
 
