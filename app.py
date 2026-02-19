@@ -80,24 +80,47 @@ input_df = pd.DataFrame([{
 
 # =======================
 # Prediction
-# =======================
+# # =======================
+
+# if st.button("Predict Churn"):
+#     try:
+#         # Step 1: transform features
+#         X_transformed = transformer.transform(input_df)
+
+#         # Step 2: model prediction
+#         pred = model.predict(X_transformed)[0]
+#         prob = model.predict_proba(X_transformed)[0][1]
+
+#         # Step 3: decode output
+#         label = target_encoder.inverse_transform([pred])[0]
+
+#         st.subheader("Result")
+#         st.write("Prediction:", label)
+#         st.write("Churn Probability:", round(prob, 2))
+
+#     except Exception as e:
+#         st.error("Prediction failed")
+#         st.exception(e)
+
+
+
+
 
 if st.button("Predict Churn"):
     try:
-        # Step 1: transform features
         X_transformed = transformer.transform(input_df)
 
-        # Step 2: model prediction
         pred = model.predict(X_transformed)[0]
-        prob = model.predict_proba(X_transformed)[0][1]
 
-        # Step 3: decode output
-        label = target_encoder.inverse_transform([pred])[0]
+        if pred == 1:
+            final_label = "Churned"
+        else:
+            final_label = "Not Churned"
 
         st.subheader("Result")
-        st.write("Prediction:", label)
-        st.write("Churn Probability:", round(prob, 2))
+        st.write("Prediction:", final_label)
 
     except Exception as e:
         st.error("Prediction failed")
         st.exception(e)
+
