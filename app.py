@@ -96,6 +96,10 @@ st.markdown(
 
 
 
+
+# =======================
+# HEADER (LOGO LEFT + TITLE)NEW
+# =======================
 col_logo, col_title = st.columns([1, 8])
 
 with col_logo:
@@ -124,13 +128,6 @@ st.markdown(
     "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
     unsafe_allow_html=True
 )
-
-
-
-
-
-
-
 
 
 
