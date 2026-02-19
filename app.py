@@ -14,8 +14,8 @@ import pandas as pd
 
 @st.cache_resource
 def load_artifacts():
-    pipeline = joblib.load("C:\\Users\\user\\Downloads\\transformer_hdfc_churn_pipeline.pkl")
-    target_encoder = joblib.load("C:\\Users\\user\\Downloads\\target_encoder.pkl")
+    pipeline = joblib.load("transformer_hdfc_churn_pipeline.pkl")
+    target_encoder = joblib.load("target_encoder.pkl")
     return pipeline, target_encoder
 
 pipeline, target_encoder = load_artifacts()
