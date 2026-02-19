@@ -11,14 +11,15 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-
 @st.cache_resource
 def load_artifacts():
-    pipeline = joblib.load("transformer_hdfc_churn_pipeline.pkl")
+    transformer = joblib.load("transformer_hdfc_churn_pipeline.pkl")
+    model = joblib.load("Hdfc bank model.pkl")
     target_encoder = joblib.load("target_encoder.pkl")
-    return pipeline, target_encoder
+    return transformer, model, target_encoder
 
-pipeline, target_encoder = load_artifacts()
+transformer, model, target_encoder = load_artifacts()
+
 
 st.title("HDFC Credit Card Churn Prediction")
 
