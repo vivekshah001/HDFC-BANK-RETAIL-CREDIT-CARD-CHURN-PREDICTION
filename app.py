@@ -86,7 +86,7 @@ with col_title:
     )
 
 with col_logo:
-    st.image("assets/hdfc_logo.png", width=90)
+    st.image("assets/HDB.png", width=90)
 
 st.markdown(
     "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
