@@ -64,46 +64,7 @@ st.markdown(
 # =======================
 # HEADER (FIXED & CLEAN)
 # =======================
-# col_title, col_logo = st.columns([7, 1])
-
-# with col_title:
-#     st.markdown(
-#         """
-#         <style>
-#         .main-title {
-#             font-size: 64px;
-#             font-weight: 900;
-#             color: white;
-#             line-height: 1.2;
-#         }
-#         </style>
-
-#         <div class="main-title">
-#             HDFC Credit Card Churn Prediction
-#         </div>
-#         """,
-#         unsafe_allow_html=True
-#     )
-
-# with col_logo:
-#     st.image("assets/HDB.png", width=90)
-
-# st.markdown(
-#     "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
-#     unsafe_allow_html=True
-)
-
-
-
-
-
-# =======================
-# HEADER (LOGO LEFT + TITLE)NEW
-# =======================
-col_logo, col_title = st.columns([1, 8])
-
-with col_logo:
-    st.image("assets/hdfc_logo.png", width=90)
+ col_title, col_logo = st.columns([7, 1])
 
 with col_title:
     st.markdown(
@@ -113,7 +74,7 @@ with col_title:
             font-size: 64px;
             font-weight: 900;
             color: white;
-            margin-top: 10px;
+            line-height: 1.2;
         }
         </style>
 
@@ -124,10 +85,17 @@ with col_title:
         unsafe_allow_html=True
     )
 
-st.markdown(
+ with col_logo:
+   st.image("assets/HDB.png", width=90)
+
+ st.markdown(
     "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
-    unsafe_allow_html=True
+     unsafe_allow_html=True
 )
+
+
+
+
 
 
 
