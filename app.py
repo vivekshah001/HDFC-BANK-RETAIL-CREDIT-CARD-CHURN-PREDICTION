@@ -62,52 +62,37 @@ st.markdown(
 
 
 
-st.markdown(
-    """
-    <style>
-    .header-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: 25px;
-    }
 
-    .header-title {
-        font-size: 64px;        /* Bigger title */
-        font-weight: 900;
-        color: white;
-        letter-spacing: 1px;
-    }
+# =======================
+# HEADER (CORRECT WAY)
+# =======================
+col_title, col_logo = st.columns([6, 1])
 
-    .header-logo img {
-        height: 75px;
-    }
-
-    .header-divider {
-        height: 2px;
-        background: linear-gradient(to right, transparent, white, transparent);
-        margin-bottom: 30px;
-    }
-    </style>
-
-    <div class="header-wrapper">
-        <div class="header-title">
+with col_title:
+    st.markdown(
+        """
+        <style>
+        .main-title {
+            font-size: 64px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0px;
+        }
+        </style>
+        <div class="main-title">
             HDFC Credit Card Churn Prediction
         </div>
-        <div class="header-logo">
-            <img src="HDB.png">
-        </div>
-    </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    <div class="header-divider"></div>
-    """,
+with col_logo:
+    st.image("assets/hdfc_logo.png", width=90)
+
+st.markdown(
+    "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
     unsafe_allow_html=True
 )
-
-
-
-
 
 
 
