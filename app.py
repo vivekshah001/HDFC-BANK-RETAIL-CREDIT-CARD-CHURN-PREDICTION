@@ -7,9 +7,85 @@ Original file is located at
     https://colab.research.google.com/drive/1Ni8jINjzDQG1cueJiBvmZdaFotLkmX3C
 """
 
+
 import streamlit as st
-import joblib
 import pandas as pd
+import joblib
+
+# =======================
+# UI THEME (SAFE)
+# =======================
+st.markdown(
+    """
+    <style>
+    /* App background */
+    .stApp {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+    }
+
+    /* Sidebar (if any) */
+    section[data-testid="stSidebar"] {
+        background-color: #111827;
+    }
+
+    /* Input labels */
+    label {
+        color: #e5e7eb !important;
+        font-weight: 600;
+    }
+
+    /* Number input / selectbox text */
+    input, textarea, select {
+        color: black !important;
+    }
+
+    /* Buttons */
+    div.stButton > button {
+        background-color: #e31837;
+        color: white;
+        border-radius: 8px;
+        height: 3em;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+    }
+
+    div.stButton > button:hover {
+        background-color: #b5122b;
+        color: white;
+    }
+
+    /* Result card */
+    .result-box {
+        background-color: rgba(255, 255, 255, 0.12);
+        padding: 20px;
+        border-radius: 14px;
+        margin-top: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================================
+
+
+
+
 
 @st.cache_resource
 def load_artifacts():
