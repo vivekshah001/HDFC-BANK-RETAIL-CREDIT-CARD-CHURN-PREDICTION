@@ -34,10 +34,10 @@ st.markdown(
 
 # =======================
 # 🔥 LOGO — YAHAN DALO 🔥
-# # =======================
-col1, col2, col3 = st.columns([1, 1, 1])
-with col2:
-    st.image("HDB.png", width=80)
+# # # =======================
+# col1, col2, col3 = st.columns([1, 1, 1])
+# with col2:
+#     st.image("HDB.png", width=80)
 
 # =======================
 # TITLE — LOGO KE BAAD
