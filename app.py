@@ -13,62 +13,122 @@ import pandas as pd
 import joblib
 
 # =======================
-# UI THEME (SAFE)
+# PAGE CONFIG (optional)
+# =======================
+st.set_page_config(page_title="HDFC Credit Card Churn Prediction")
+
+# =======================
+# UI THEME / CSS
 # =======================
 st.markdown(
     """
     <style>
-    /* App background */
     .stApp {
         background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
         color: white;
-    }
-
-    /* Sidebar (if any) */
-    section[data-testid="stSidebar"] {
-        background-color: #111827;
-    }
-
-    /* Input labels */
-    label {
-        color: #e5e7eb !important;
-        font-weight: 600;
-    }
-
-    /* Number input / selectbox text */
-    input, textarea, select {
-        color: black !important;
-    }
-
-    /* Buttons */
-    div.stButton > button {
-        background-color: #e31837;
-        color: white;
-        border-radius: 8px;
-        height: 3em;
-        width: 100%;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-    }
-
-    div.stButton > button:hover {
-        background-color: #b5122b;
-        color: white;
-    }
-
-    /* Result card */
-    .result-box {
-        background-color: rgba(255, 255, 255, 0.12);
-        padding: 20px;
-        border-radius: 14px;
-        margin-top: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# =======================
+# 🔥 LOGO — YAHAN DALO 🔥
+# =======================
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    st.image("assets/hdfc_logo.png", width=80)
+
+# =======================
+# TITLE — LOGO KE BAAD
+# =======================
+st.markdown(
+    """
+    <style>
+    .header-title {
+        font-size: 42px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    </style>
+
+    <div class="header-title">
+        HDFC Credit Card Churn Prediction
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================
+# UI THEME (SAFE)
+# =======================
+# st.markdown(
+#     """
+#     <style>
+#     /* App background */
+#     .stApp {
+#         background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+#         color: white;
+#     }
+
+#     /* Sidebar (if any) */
+#     section[data-testid="stSidebar"] {
+#         background-color: #111827;
+#     }
+
+#     /* Input labels */
+#     label {
+#         color: #e5e7eb !important;
+#         font-weight: 600;
+#     }
+
+#     /* Number input / selectbox text */
+#     input, textarea, select {
+#         color: black !important;
+#     }
+
+#     /* Buttons */
+#     div.stButton > button {
+#         background-color: #e31837;
+#         color: white;
+#         border-radius: 8px;
+#         height: 3em;
+#         width: 100%;
+#         font-size: 16px;
+#         font-weight: bold;
+#         border: none;
+#     }
+
+#     div.stButton > button:hover {
+#         background-color: #b5122b;
+#         color: white;
+#     }
+
+#     /* Result card */
+#     .result-box {
+#         background-color: rgba(255, 255, 255, 0.12);
+#         padding: 20px;
+#         border-radius: 14px;
+#         margin-top: 20px;
+#         box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 
 
@@ -76,44 +136,44 @@ st.markdown(
 # header
 # ============================
 
-st.markdown(
-    """
-    <style>
-    .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        margin-bottom: 25px;
-    }
+# st.markdown(
+#     """
+#     <style>
+#     .header-container {
+#         display: flex;
+#         align-items: center;
+#         justify-content: center;
+#         gap: 18px;
+#         margin-bottom: 25px;
+#     }
 
-    .header-container img {
-        height: 70px;
-    }
+#     .header-container img {
+#         height: 70px;
+#     }
 
-    .header-title {
-        font-size: 42px;
-        font-weight: 900;
-        color: white;
-        letter-spacing: 0.5px;
-    }
+#     .header-title {
+#         font-size: 42px;
+#         font-weight: 900;
+#         color: white;
+#         letter-spacing: 0.5px;
+#     }
 
-    .header-divider {
-        height: 2px;
-        background: linear-gradient(to right, transparent, #ffffff, transparent);
-        margin: 15px 0 30px 0;
-    }
-    </style>
+#     .header-divider {
+#         height: 2px;
+#         background: linear-gradient(to right, transparent, #ffffff, transparent);
+#         margin: 15px 0 30px 0;
+#     }
+#     </style>
 
-    <div class="header-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/HDFC_Bank_Logo.svg">
-        <div class="header-title">HDFC Credit Card Churn Prediction</div>
-    </div>
+#     <div class="header-container">
+#         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/HDFC_Bank_Logo.svg">
+#         <div class="header-title">HDFC Credit Card Churn Prediction</div>
+#     </div>
 
-    <div class="header-divider"></div>
-    """,
-    unsafe_allow_html=True
-)
+#     <div class="header-divider"></div>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 
 
