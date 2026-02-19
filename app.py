@@ -79,7 +79,7 @@ with col_title:
             font-size: 64px;
             font-weight: 900;
             color: white;
-            margin-top: -5px;
+            margin-top: -10px;
         }
         </style>
 
