@@ -82,29 +82,6 @@ input_df = pd.DataFrame([{
 # Prediction
 # # =======================
 
-# if st.button("Predict Churn"):
-#     try:
-#         # Step 1: transform features
-#         X_transformed = transformer.transform(input_df)
-
-#         # Step 2: model prediction
-#         pred = model.predict(X_transformed)[0]
-#         prob = model.predict_proba(X_transformed)[0][1]
-
-#         # Step 3: decode output
-#         label = target_encoder.inverse_transform([pred])[0]
-
-#         st.subheader("Result")
-#         st.write("Prediction:", label)
-#         st.write("Churn Probability:", round(prob, 2))
-
-#     except Exception as e:
-#         st.error("Prediction failed")
-#         st.exception(e)
-
-
-
-
 
 if st.button("Predict Churn"):
     try:
@@ -123,4 +100,27 @@ if st.button("Predict Churn"):
     except Exception as e:
         st.error("Prediction failed")
         st.exception(e)
+
+
+
+if final_label == "Churned":
+    st.markdown(
+        f"""
+        <div class="result-box">
+            <h3 style="color:#ff4b4b;">⚠ Customer Likely to Churn</h3>
+            <p><b>Status:</b> {final_label}</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        f"""
+        <div class="result-box">
+            <h3 style="color:#00ff9c;">✅ Customer Safe</h3>
+            <p><b>Status:</b> {final_label}</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
