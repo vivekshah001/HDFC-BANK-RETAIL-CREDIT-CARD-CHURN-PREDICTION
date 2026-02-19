@@ -64,9 +64,12 @@ with col2:
 
 
 # =======================
-# HEADER (FIXED & CLEAN)
+# HEADER (LOGO LEFT + TITLE)NEW
 # =======================
- col_title, col_logo = st.columns([7, 1])
+col_logo, col_title = st.columns([1, 8])
+
+with col_logo:
+    st.image("HDB.png", width=90)
 
 with col_title:
     st.markdown(
@@ -76,7 +79,7 @@ with col_title:
             font-size: 64px;
             font-weight: 900;
             color: white;
-            line-height: 1.2;
+            margin-top: 10px;
         }
         </style>
 
@@ -87,12 +90,9 @@ with col_title:
         unsafe_allow_html=True
     )
 
- with col_logo:
-   st.image("assets/HDB.png", width=90)
-
- st.markdown(
+st.markdown(
     "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
-     unsafe_allow_html=True
+    unsafe_allow_html=True
 )
 
 
