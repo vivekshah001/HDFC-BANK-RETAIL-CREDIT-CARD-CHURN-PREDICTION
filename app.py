@@ -72,6 +72,48 @@ st.markdown(
 
 
 
+# ============================
+# header
+# ============================
+
+st.markdown(
+    """
+    <style>
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+
+    .header-container img {
+        height: 70px;
+    }
+
+    .header-title {
+        font-size: 42px;
+        font-weight: 900;
+        color: white;
+        letter-spacing: 0.5px;
+    }
+
+    .header-divider {
+        height: 2px;
+        background: linear-gradient(to right, transparent, #ffffff, transparent);
+        margin: 15px 0 30px 0;
+    }
+    </style>
+
+    <div class="header-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/HDFC_Bank_Logo.svg">
+        <div class="header-title">HDFC Credit Card Churn Prediction</div>
+    </div>
+
+    <div class="header-divider"></div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
@@ -97,7 +139,7 @@ def load_artifacts():
 transformer, model, target_encoder = load_artifacts()
 
 
-st.title("HDFC Credit Card Churn Prediction")
+# st.title("HDFC Credit Card Churn Prediction")
 
 # =======================
 # Categorical Inputs (5)
