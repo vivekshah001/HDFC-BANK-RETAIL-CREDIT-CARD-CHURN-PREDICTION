@@ -41,30 +41,63 @@ with col2:
 
 # =======================
 # TITLE — LOGO KE BAAD
-# =======================
-st.markdown(
-    """
-    <style>
-    .header-title {
-        font-size: 42px;
-        font-weight: 900;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    </style>
+# # =======================
+# st.markdown(
+#     """
+#     <style>
+#     .header-title {
+#         font-size: 42px;
+#         font-weight: 900;
+#         text-align: center;
+#         margin-bottom: 10px;
+#     }
+#     </style>
 
-    <div class="header-title">
-        HDFC Credit Card Churn Prediction
-    </div>
-    """,
+#     <div class="header-title">
+#         HDFC Credit Card Churn Prediction
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+
+# =======================
+# HEADER (FIXED & CLEAN)
+# =======================
+col_title, col_logo = st.columns([7, 1])
+
+with col_title:
+    st.markdown(
+        """
+        <style>
+        .main-title {
+            font-size: 64px;
+            font-weight: 900;
+            color: white;
+            line-height: 1.2;
+        }
+        </style>
+
+        <div class="main-title">
+            HDFC Credit Card Churn Prediction
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col_logo:
+    st.image("assets/hdfc_logo.png", width=90)
+
+st.markdown(
+    "<hr style='border:1px solid rgba(255,255,255,0.3); margin-bottom:30px;'>",
     unsafe_allow_html=True
 )
 
 
 
 
-
 # purane code necha h
+# ISKE NECHA MAT TOUCH KARO AAGAR CODE MESSY HO JAYEGA TOH KAM AAYEGA 
 
 
 # =======================
