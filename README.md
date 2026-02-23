@@ -16,3 +16,5 @@ Handles categorical and numerical features
 Real-time churn prediction
 Clean, structured, and user-friendly UI
 Serialized model artifacts for reproducibility
+
+app link--->https://hdfc-bank-retail-credit-card-churn-prediction-imumjv8dafieq9yy.streamlit.app/
